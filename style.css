@@ -1,0 +1,232 @@
+:root {
+    --primary-color: rgb(0, 0, 0);
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  @font-face {
+    font-family: "Stora";
+    src: url("./font/cinzel.regular.ttf");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: baseline;
+    background: url(img/image4.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family:  sans-serif;
+    place-items: center;
+    min-height: 100vh;
+    margin: 30px;
+    display: grid;
+}
+
+  /* Global Stylings */
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px rgba(0, 0, 0, 0.55);
+    border-radius: 0.25rem;
+    background: rgba(205, 197, 197, 0.666);
+  }
+  
+  .container{
+    width: 100%;
+    border-radius: 20px;
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 25px;
+    margin: 0 10px;
+  }
+
+  h3 {
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    font-weight: ;
+    text-align: center;
+    margin: 20px;
+    border: none;
+    border-radius: 7px;
+    padding: 15px;
+    transition: 0.3s;
+    background: rgba(205, 197, 197, 0.666);
+  }
+
+  .width-50 {
+    width: 50%;
+  }
+  
+  .ml-auto {
+    margin-left: auto;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Progressbar */
+  .progressbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    margin: 2rem 0 4rem;
+  }
+  
+  .progressbar::before,
+  .progress {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #dcdcdc;
+    z-index: -1;
+  }
+  
+  .progress {
+    background-color: var(--primary-color);
+    width: 0%;
+    transition: 0.3s;
+  }
+  
+  .progress-step {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .progress-step::before {
+    counter-increment: step;
+    content: counter(step);
+  }
+
+  .progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .progress-step-active {
+    background-color: var(--primary-color);
+    color: #f3f3f3;
+  }
+  
+  /* Form */
+  .form {
+    width: clamp(320px, 30%, 430px);
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 0.35rem;
+    padding: 1.5rem;
+  }
+  
+  .form-step {
+    display: none;
+    transform-origin: top;
+    animation: animate 0.5s;
+  }
+  
+  .form-step-active {
+    display: block;
+  }
+  
+  .input-group {
+    margin: 2rem 0;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  
+  @keyframes animate {
+    from {
+      transform: scale(1, 0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1, 1);
+      opacity: 1;
+    }
+  }
+  
+  /* Button */
+  .btns-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .btn {
+    padding: 0.75rem;
+    display: block;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: #f3f3f3;
+    text-align: center;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .btn:hover {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+  }
+
+  .inputGroup{
+    display: grid;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center ;
+    width: 630px;
+    margin: 10px;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 7px;
+    transition: 0.3s;
+    background: rgba(27, 34, 29, 0.7);
+  }
+
+  .inputGroup:hover {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+  }
+
+  input[type="radio"] {
+    width: 50px;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  input[type="checkbox"] {
+    width: 50px;
+    cursor: pointer;
+    position: absolute;
+  }

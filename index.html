@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Pengolahan Data</title>
+  </head>
+  <body>
+
+    <form action="https://sheetdb.io/api/v1/vj7phhcy2kz1s" method="post" id="sheetdb-form"  >
+      <h1 class="text-center">PENGOLAHAN DATA</h1>
+      <!-- Progress bar -->
+      <div class="progressbar">
+        <div class="progress" id="progress"></div>
+        
+        <div
+          class="progress-step progress-step-active"
+          data-title=" "
+        ></div>
+        <div class="progress-step" data-title="DATA KORBAN"></div>
+        <div class="progress-step" data-title="DATA TERSANGKA"></div>
+        <div class="progress-step" data-title=" "></div>
+      </div>
+
+      <div class="container">
+
+      <!-- Steps -->
+      <div class="form-step form-step-active">
+        <div class="input-group">
+            <label for=" ">NOMOR - TGL LAPORAN POLISI</label>
+            <input type="text" name="data[NOMOR - TGL LAPORAN POLISI]" >
+        </div>
+        <div class="input-group">
+            <label for=" ">TANGGAL KEJADIAN KECELAKAAN</label>
+            <input type="date" name="data[TANGGAL KEJADIAN KECELAKAAN]" >
+        </div>
+        <div class="input-group">
+            <label for=" ">JAM KEJADIAN KECELAKAAN</label>
+            <input type="time" name="data[JAM KEJADIAN KECELAKAAN]" >
+        </div>
+        <div class="input-group">
+            <label for=" ">TEMPAT KEJADIAN KECELAKAAN</label>
+            <input type="text" name="data[TEMPAT KEJADIAN KECELAKAAN]" >
+        </div>
+          
+          <h3>KONDISI CUACA PADA SAAT KEJADIAN</h3>
+          <div class="inputGroup">
+            <input type="radio" id="item1" name="data[KONDISI CUACA]" value="Cerah">Cerah
+            </label>
+          </div>
+          <div class="inputGroup">
+            <input type="radio" id="item2" name="data[KONDISI CUACA]" value="Hujan">Hujan
+            </label>
+          </div>
+          <div class="inputGroup">
+            <input type="radio" id="item3" name="data[KONDISI CUACA]" value="Gerimis">Gerimis
+            </label>
+          </div>
+          <div class="inputGroup">
+            <input type="radio" id="item4" name="data[KONDISI CUACA]" value="Berkabut">Berkabut
+            </label>
+        </div>
+
+        <h3>KECELAKAAN BERDASARKAN RUAS / STATUS JALAN</h3>
+        <div class="inputGroup">
+            <input type="radio" id="item1" name="data[RUAS / STATUS JALAN]" value="Jalan Nasional">Jalan Nasional
+            </label>
+        </div>
+        <div class="inputGroup">
+            <input type="radio" id="item2" name="data[RUAS / STATUS JALAN]" value="Jalan Provinsi">Jalan Provinsi
+            </label>
+        </div>
+        <div class="inputGroup">
+            <input type="radio" id="item3" name="data[RUAS / STATUS JALAN]" value="Jalan Kota / Kabupaten">Jalan Kota / Kabupaten
+            </label>
+        </div>
+        <div class="inputGroup">
+            <input type="radio" id="item4" name="data[RUAS / STATUS JALAN]" value="Jalan Lingkungan">Jalan Lingkungan
+            </label>
+        </div>
+        
+        <h3>JENIS KECELAKAAN</h3>
+        <div class="inputGroup">
+          <input type="radio" id="item1" name="data[JENIS KECELAKAAN]" value="Kecelakaan Tunggal">Kecelakaan Tunggal
+          </label>
+        </div>
+        <div class="inputGroup">
+          <input type="radio" id="item2" name="data[JENIS KECELAKAAN]" value="Tabrakan Samping-Samping">Tabrakan Samping - Samping
+          </label>
+        </div>
+        <div class="inputGroup">
+          <input type="radio" id="item3" name="data[JENIS KECELAKAAN]" value="Tabrakan Depan-Depan">Tabrakan Depan - Depan
+          </label>
+        </div>
+        <div class="inputGroup">
+        <label for="item4">
+          <input type="radio" id="item4" name="data[JENIS KECELAKAAN]" value="Tabrakan Depan-Belakang">Tabrakan Depan - Belakang
+          </label>
+        </div>
+        <div class="inputGroup">
+        <label for="item5">
+          <input type="radio" id="item5" name="data[JENIS KECELAKAAN]" value="Tabrakan dengan Pengguna Jalan Lain">Tabrakan dengan Pengguna Jalan Lain
+          </label>
+        </div>
+
+        <div class="">
+          <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+        </div>
+      </div>
+      <div class="form-step">
+        <div class="input-group">
+          <label for=" ">NAMA</label>
+          <input type="text" name="data[NAMA KORBAN]" >
+      </div>
+      <div class="input-group">
+          <label for=" ">USIA</label>
+          <input type="text" name="data[USIA KORBAN]" >
+      </div>
+
+      <h3>JENIS KELAMIN</h3>
+      <div class="inputGroup">
+        <input type="radio" id="item1" name="data[JENIS KELAMIN KORBAN]" value="Laki - Laki">Laki - Laki
+        </label>
+      </div>
+      <div class="inputGroup">
+        <input type="radio" id="item2" name="data[JENIS KELAMIN KORBAN]" value="Perempuan">Perempuan
+        </label>
+      </div>
+
+      <h3>KEPEMILIKAN SIM</h3>
+        <div class="inputGroup">
+          <input type="radio" id="item1" name="data[SIM KORBAN]" value="SIM A">SIM A
+          </label>
+        </div>
+        <div class="inputGroup">
+          <input type="radio" id="item2" name="data[SIM KORBAN]" value="SIM B1">SIM B1
+          </label>
+        </div>
+        <div class="inputGroup">
+          <input type="radio" id="item3" name="data[SIM KORBAN]" value="SIM B2">SIM B2
+          </label>
+        </div>
+        <div class="inputGroup">
+        <label for="item4">
+          <input type="radio" id="item4" name="data[SIM KORBAN]" value="SIM C">SIM C
+          </label>
+        </div>
+        <div class="inputGroup">
+        <label for="item5">
+          <input type="radio" id="item5" name="data[SIM KORBAN]" value="SIM D">SIM D
+          </label>
+        </div>
+        <div class="inputGroup">
+        <label for="item6">
+          <input type="radio" id="item6" name="data[SIM KORBAN]" value="Tidak Memiliki SIM">Tidak Memiliki SIM
+          </label>
+        </div>
+
+        <h3>PEKERJAAN</h3>
+        <div class="inputGroup">
+          <input type="radio" id="item1" name="data[PEKERJAAN KORBAN]" value="Karyawan Swasta">Karyawan Swasta
+          </label>
+        </div>
+        <div class="inputGroup">
+          <input type="radio" id="item2" name="data[PEKERJAAN KORBAN]" value="Wiraswasta">Wiraswasta
+          </label>
+        </div>
+        <div class="inputGroup">
+          <input type="radio" id="item3" name="data[PEKERJAAN KORBAN]" value="PNS / Pegawai Negeri Sipil">PNS
+          </label>
+        </div>
+        <div class="inputGroup">
+        <label for="item4">
+          <input type="radio" id="item4" name="data[PEKERJAAN KORBAN]" value="POLRI">POLRI
+          </label>
+        </div>
+        <div class="inputGroup">
+        <label for="item5">
+          <input type="radio" id="item5" name="data[PEKERJAAN KORBAN]" value="TNI">TNI
+          </label>
+        </div>
+        <div class="inputGroup">
+        <label for="item6">
+          <input type="radio" id="item6" name="data[PEKERJAAN KORBAN]" value="Mahasiswa">Mahasiswa
+          </label>
+        </div>
+
+        <h3>JENIS KENDARAAN</h3>
+        <div class="inputGroup">
+          <input type="radio" id="item1" name="data[JENIS KENDARAAN KORBAN]" value="Mobil Pribadi">Mobil Pribadi
+          </label>
+        </div>
+        <div class="inputGroup">
+          <input type="radio" id="item2" name="data[JENIS KENDARAAN KORBAN]" value="Angkutan Penumpang">Angkutan Penumpang
+          </label>
+        </div>
+        <div class="inputGroup">
+          <input type="radio" id="item3" name="data[JENIS KENDARAAN KORBAN]" value="Angkutan Barang">Angkutan Barang
+          </label>
+        </div>
+        <div class="inputGroup">
+        <label for="item4">
+          <input type="radio" id="item4" name="data[JENIS KENDARAAN KORBAN]" value="Bus">Bus
+          </label>
+        </div>
+        <div class="inputGroup">
+        <label for="item5">
+          <input type="radio" id="item5" name="data[JENIS KENDARAAN KORBAN]" value="Sepeda Motor">Sepeda Motor
+          </label>
+        </div>
+        <div class="inputGroup">
+        <label for="item5">
+          <input type="radio" id="item6" name="data[JENIS KENDARAAN KORBAN]" value="Kendaraan Tidak Bermotor">Kendaraan Tidak Bermotor
+          </label>
+        </div>
+
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <a href="#" class="btn btn-next">Next</a>
+        </div>
+      </div>
+
+      <div class="form-step">
+          <div class="input-group">
+            <label for=" ">NAMA</label>
+            <input type="text" name="data[NAMA TERSANGKA]" >
+        </div>
+        <div class="input-group">
+            <label for=" ">USIA</label>
+            <input type="text" name="data[USIA TERSANGKA]" >
+        </div>
+
+        <h3>JENIS KELAMIN</h3>
+      <div class="inputGroup">
+        <input type="checkbox" id="item1" name="data[JENIS KELAMIN TERSANGKA]" value="Laki - Laki">Laki - Laki
+        </label>
+      </div>
+      <div class="inputGroup">
+        <input type="checkbox" id="item2" name="data[JENIS KELAMIN TERSANGKA]" value="Perempuan">Perempuan
+        </label>
+      </div>
+
+      <h3>KEPEMILIKAN SIM</h3>
+        <div class="inputGroup">
+          <input type="checkbox" id="item1" name="data[SIM TERSANGKA]" value="SIM A">SIM A
+          </label>
+        </div>
+        <div class="inputGroup">
+          <input type="checkbox" id="item2" name="data[SIM TERSANGKA]" value="SIM B1">SIM B1
+          </label>
+        </div>
+        <div class="inputGroup">
+          <input type="checkbox" id="item3" name="data[SIM TERSANGKA]" value="SIM B2">SIM B2
+          </label>
+        </div>
+        <div class="inputGroup">
+        <label for="item4">
+          <input type="checkbox" id="item4" name="data[SIM TERSANGKA]" value="SIM C">SIM C
+          </label>
+        </div>
+        <div class="inputGroup">
+        <label for="item5">
+          <input type="checkbox" id="item5" name="data[SIM TERSANGKA]" value="SIM D">SIM D
+          </label>
+        </div>
+        <div class="inputGroup">
+        <label for="item6">
+          <input type="checkbox" id="item6" name="data[SIM TERSANGKA]" value="Tidak Memiliki SIM">Tidak Memiliki SIM
+          </label>
+        </div>
+
+
+        <h3>PEKERJAAN</h3>
+        <div class="inputGroup">
+          <input type="radio" id="item1" name="data[PEKERJAAN TERSANGKA]" value="Karyawan Swasta">Karyawan Swasta
+          </label>
+        </div>
+        <div class="inputGroup">
+          <input type="radio" id="item2" name="data[PEKERJAAN TERSANGKA]" value="Wiraswasta">Wiraswasta
+          </label>
+        </div>
+        <div class="inputGroup">
+          <input type="radio" id="item3" name="data[PEKERJAAN TERSANGKA]" value="PNS / Pegawai Negeri Sipil">PNS
+          </label>
+        </div>
+        <div class="inputGroup">
+        <label for="item4">
+          <input type="radio" id="item4" name="data[PEKERJAAN TERSANGKA]" value="POLRI">POLRI
+          </label>
+        </div>
+        <div class="inputGroup">
+        <label for="item5">
+          <input type="radio" id="item5" name="data[PEKERJAAN TERSANGKA]" value="TNI">TNI
+          </label>
+        </div>
+        <div class="inputGroup">
+        <label for="item6">
+          <input type="radio" id="item6" name="data[PEKERJAAN TERSANGKA]" value="Mahasiswa">Mahasiswa
+          </label>
+        </div>
+
+        <h3>JENIS KENDARAAN</h3>
+        <div class="inputGroup">
+          <input type="radio" id="item1" name="data[JENIS KENDARAAN TERSANGKA]" value="Mobil Pribadi">Mobil Pribadi
+          </label>
+        </div>
+        <div class="inputGroup">
+          <input type="radio" id="item2" name="data[JENIS KENDARAAN TERSANGKA]" value="Angkutan Penumpang">Angkutan Penumpang
+          </label>
+        </div>
+        <div class="inputGroup">
+          <input type="radio" id="item3" name="data[JENIS KENDARAAN TERSANGKA]" value="Angkutan Barang">Angkutan Barang
+          </label>
+        </div>
+        <div class="inputGroup">
+        <label for="item4">
+          <input type="radio" id="item4" name="data[JENIS KENDARAAN TERSANGKA]" value="Bus">Bus
+          </label>
+        </div>
+        <div class="inputGroup">
+        <label for="item5">
+          <input type="radio" id="item5" name="data[JENIS KENDARAAN TERSANGKA]" value="Sepeda Motor">Sepeda Motor
+          </label>
+        </div>
+        <div class="inputGroup">
+        <label for="item5">
+          <input type="radio" id="item6" name="data[JENIS KENDARAAN TERSANGKA]" value="Kendaraan Tidak Bermotor">Kendaraan Tidak Bermotor
+          </label>
+        </div>
+
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <a href="#" class="btn btn-next">Next</a>
+        </div>
+      </div>
+
+      <div class="form-step">
+          <div class="inputGroup">
+            <label for=" ">MENINGGAL DUNIA</label>
+            <input type="number" name="data[MD]" >
+        </div>
+        <div class="inputGroup">
+            <label for=" ">LUKA BERAT</label>
+            <input type="number" name="data[LB]" >
+        </div>
+        <div class="inputGroup">
+          <label for=" ">LUKA RINGAN</label>
+          <input type="number" name="data[LR]" >
+      </div>
+      <div class="inputGroup">
+        <label for=" ">KERUGIAN MATERIAL ( Rp. ) </label>
+        <input type="text" name="data[KERUGIAN MATERIAL]" >
+    </div>
+
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <input type="submit" value="Submit" class="btn" />
+        </div>
+      </div>
+      </div>
+    </form>
+  </body>
+</html>
